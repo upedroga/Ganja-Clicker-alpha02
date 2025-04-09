@@ -4,12 +4,12 @@ let becks = 0, estufas = 0, fazendas = 0;
 let gps = 0, totalUpgrades = 0, playTime = 0;
 let musicOn = "true";
 
-// Custos
+
 let becksCost = 50;
 let estufaCost = 250;
 let fazendaCost = 1000;
 
-// Tentar carregar save
+
 const saved = JSON.parse(localStorage.getItem("saveData"));
 if (saved) {
   ganjas = saved.ganjas || 0;
@@ -158,19 +158,19 @@ buyFazenda.addEventListener("click", () => {
   }
 });
 
-// GPS Loop
+
 setInterval(() => {
   ganjas += gps / 10;
   updateDisplays();
 }, 100);
 
-// Tempo de jogo
+
 setInterval(() => {
   playTime++;
   updateDisplays();
 }, 1000);
 
-// Auto-save a cada 10 segundos
+
 setInterval(() => {
   const save = {
     ganjas,
@@ -188,7 +188,7 @@ setInterval(() => {
   localStorage.setItem("saveData", JSON.stringify(save));
 }, 10000);
 
-// Modais
+
 settingsBtn.addEventListener("click", () => {
   settingsModal.style.display = settingsModal.style.display === "block" ? "none" : "block";
   statsModal.style.display = "none";
