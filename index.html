@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Clicker Game - ALPHA02</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-buttons">
+    <button id="settingsBtn">⚙️</button>
+    <button id="statsBtn">📊</button>
+  </div>
+
+  <div class="game">
+    <h1>Ganjas: <span id="counter">0</span></h1>
+    <p>Ganjas por clique: <span id="clickPower">1</span></p>
+    <p>Ganjas por segundo: <span id="gps">0</span></p>
+
+    <img id="clickImg" src="eh.png" alt="Clique aqui" class="clickable-img">
+  </div>
+
+  <div class="upgrades">
+    <button id="buyBecks">Comprar Becks (<span id="becksCost">50</span>)</button>
+    <p>Becks: <span id="becks">0</span></p>
+    <small id="becksProd">+0.00 GPS (0 unidades)</small>
+  
+    <button id="buyEstufa">Comprar Estufa (<span id="estufaCost">250</span>)</button>
+    <p>Estufas: <span id="estufas">0</span></p>
+    <small id="estufaProd">+0.00 GPS (0 unidades)</small>
+  
+    <button id="buyFazenda">Comprar Fazenda Escondida (<span id="fazendaCost">1000</span>)</button>
+    <p>Fazendas: <span id="fazendas">0</span></p>
+    <small id="fazendaProd">+0.00 GPS (0 unidades)</small>
+  </div>
+  
+  <div id="notification" class="notification"></div>
+
+  <div id="settingsModal" class="modal">
+    <h2>Configurações</h2>
+    <button id="resetBtn">Resetar Progresso</button>
+    <button id="toggleMusicBtn">Desativar Música</button>
+    <button id="saveBtn">Salvar Progresso</button>
+  </div>
+
+  <div id="statsModal" class="modal">
+    <h2>Estatísticas</h2>
+    <p>Ganjas por segundo (GPS): <span id="statsGps">0</span></p>
+    <p>Tempo de jogo: <span id="playTime">0d 0h 0m 0s</span></p>
+    <p>Total de upgrades: <span id="totalUpgrades">0</span></p>
+    <p>Achievements: <i>Em breve...</i></p>
+  </div>
+
+  <audio id="bgMusic" src="musica.mp3" autoplay loop></audio>
+
+  <script src="script.js"></script>
+  
+  <div class="version">v ALPHA 0.2</div>
+
+</body>
+</html>
